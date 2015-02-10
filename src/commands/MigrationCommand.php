@@ -26,7 +26,7 @@ class MigrationCommand extends Command
      */
     public function fire()
     {
-        $this->laravel->view->addNamespace('entrust', substr(__DIR__, 0, -8).'views');
+        $this->laravel->view->addNamespace('ma-entrust', substr(__DIR__, 0, -8).'views');
 
         $rolesTable          = Config::get('ma_entrust.roles_table');
         $roleUserTable       = Config::get('ma_entrust.role_user_table');
@@ -71,7 +71,7 @@ class MigrationCommand extends Command
      */
     protected function createMigration($rolesTable, $roleUserTable, $permissionsTable, $permissionRoleTable)
     {
-        $migrationFile = $this->laravel->path."/database/migrations/".date('Y_m_d_His')."_entrust_setup_tables.php";
+        $migrationFile = $this->laravel->path."/../database/migrations/".date('Y_m_d_His')."_entrust_setup_tables.php";
 
         $usersTable  = Config::get('auth.table');
         $userModel   = Config::get('auth.model');
@@ -79,7 +79,7 @@ class MigrationCommand extends Command
 
         $data = compact('rolesTable', 'roleUserTable', 'permissionsTable', 'permissionRoleTable', 'usersTable', 'userKeyName');
 
-        $output = $this->laravel->view->make('ma_entrust.generators.migration')->with($data)->render();
+        $output = $this->laravel->view->make('ma_entrust::generators.migration')->with($data)->render();
 
         if (!file_exists($migrationFile) && $fs = fopen($migrationFile, 'x')) {
             fwrite($fs, $output);
