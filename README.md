@@ -4,6 +4,8 @@
 [![License](https://poser.pugx.org/michele-angioni/entrust/license.svg)](https://packagist.org/packages/michele-angioni/entrust)
 [![SensioLabsInsight](https://insight.sensiolabs.com/projects/c0d83e97-2165-4f98-9b96-bcf62fce14b3/small.png)](https://insight.sensiolabs.com/projects/c0d83e97-2165-4f98-9b96-bcf62fce14b3)
 
+## This fork has been merged back to the [original Zizaco/Entrust repo](https://github.com/Zizaco/entrust/tree/laravel-5) in the new laravel-5 branch. Please use that from now on, this fork will be deleted in a few days.
+
 Entrust is a succinct and flexible way to add Role-based Permissions to **Laravel 5**.
 
 First of all I want to give credit to the original developers of this package.  
