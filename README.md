@@ -41,7 +41,7 @@ If you are looking for the Laravel 4 version, take a look at [Bbatsche's](https:
 
 In order to install Laravel 5 Entrust, just add 
 
-    "michele-angioni/entrust": "~3.0"
+    "michele-angioni/entrust": "~3.0@dev"
 
 to your composer.json. Then run `composer install` or `composer update`.
 
